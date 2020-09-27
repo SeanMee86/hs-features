@@ -1,0 +1,22 @@
+@import "./_variables.scss";
+
+body {
+  overflow-x: hidden;
+
+  h1 {
+    @include arboriaBold();
+  }
+
+  p,
+  ul li {
+    font-size: 16px;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}

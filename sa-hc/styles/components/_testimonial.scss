@@ -1,0 +1,114 @@
+/* stylelint-disable no-descending-specificity */
+
+@import "resources/assets/styles/common/_variables.scss";
+
+body.page-id-251 {
+  .wrap {
+    .content {
+      .main {
+        #section-2 {
+          .container {
+            padding: 0;
+
+            .row {
+              margin-bottom: 20px;
+
+              .testimonial-container {
+                margin-top: 20px;
+
+                @media screen and (max-width: 767px) {
+                  padding: 0 10px;
+                }
+
+                > div {
+                  min-height: 25vh;
+                  padding: 20px;
+                  display: none;
+                  flex-flow: column;
+                  justify-content: center;
+                  position: relative;
+                  overflow: hidden;
+
+                  .close {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin: 5px;
+                  }
+
+                  img {
+                    position: absolute;
+                    height: 140%;
+                    left: -5px;
+                  }
+
+                  p {
+                    margin: 0 auto;
+                    max-width: 600px;
+                    width: 100%;
+                    position: relative;
+
+                    &.employee-quote {
+                      font-size: 24px;
+                      margin-bottom: 15px;
+
+                      @include arboriaBook();
+
+                      &::before {
+                        content: '"';
+                        position: absolute;
+                        left: -10px;
+                      }
+                    }
+
+                    &.employee-nameTitle {
+                      font-size: 16px;
+                      text-transform: uppercase;
+
+                      @include arboriaBold();
+                    }
+                  }
+                }
+              }
+
+              .col-4 {
+                @media screen and (max-width: 767px) {
+                  padding: 0 10px;
+                }
+
+                img {
+                  position: absolute;
+                  bottom: 0;
+                  height: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+
+                > div {
+                  height: 100%;
+                  position: relative;
+
+                  .overlay {
+                    z-index: 1;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.05);
+                  }
+                }
+
+                &:hover {
+                  cursor: pointer;
+
+                  .overlay {
+                    background: rgba(0, 0, 0, 0);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

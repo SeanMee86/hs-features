@@ -1,0 +1,25 @@
+#freeVeinModal {
+  .modal-dialog {
+    .modal-content {
+      background-color: map-get($theme-colors, dark-primary);
+
+      .modal-header {
+        h2 {
+          padding: 20px;
+          font-size: 36px;
+          color: #fff;
+        }
+
+        .close {
+          color: #fff;
+        }
+      }
+
+      .modal-body {
+        font-size: 18px;
+        padding: 35px;
+        color: #fff;
+      }
+    }
+  }
+}

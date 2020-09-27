@@ -1,0 +1,118 @@
+/* stylelint-disable no-descending-specificity */
+@import "../common/variables";
+
+.page-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+
+  #jarallax-container-0 > div {
+    background-position: 50% 20% !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    #jarallax-container-0 > div {
+      background-position: 38% 0 !important;
+    }
+  }
+
+  @include pageHeaderH1;
+
+  #hero-form,
+  #find-facility-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 900px;
+
+    .form-group:first-child {
+      width: 43%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    .form-group {
+      width: 22%;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        margin-right: 20px;
+      }
+
+      input,
+      select {
+        border-radius: 0;
+
+        option,
+        &::placeholder {
+          @include arboriaBook();
+        }
+
+        @include arboriaBook();
+      }
+
+      &:last-child {
+        width: unset;
+
+        button {
+          border-radius: 0;
+          width: 50px;
+          height: 40px;
+          color: #6c6a5e;
+        }
+      }
+    }
+
+    label {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-flow: column;
+      max-width: 500px;
+      margin: auto;
+      background: beige;
+      padding: 20px;
+      position: relative;
+      top: 56px;
+
+      .form-group {
+        width: 100%;
+        max-width: 450px;
+
+        &:last-child {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  &.header-404 {
+    @include btnOverride();
+
+    h1 {
+      text-align: center;
+      max-width: 800px;
+      text-shadow: unset;
+      color: map-get($theme-colors, dark-blue);
+    }
+
+    p {
+      color: map-get($theme-colors, main-orange);
+      text-transform: uppercase;
+      font-size: 18px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 50px;
+      }
+
+      @include arboriaBold();
+    }
+  }
+
+  @include sectionStyling();
+  @include sectionInnerStyling(1170px);
+}

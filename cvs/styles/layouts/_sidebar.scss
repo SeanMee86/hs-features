@@ -1,0 +1,61 @@
+body.parent-pageid-674 {
+  aside {
+    .sidebar-img img {
+      max-width: 280px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    .default-btn {
+      .wp-block-button {
+        width: 100%;
+
+        a {
+          display: block;
+          margin: 10px auto;
+          text-align: center;
+
+          @media screen and (min-width: 768px) {
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+body:not(.page-id-672) {
+  @include innerPageTestimonial;
+}
+
+body.page-id-672 {
+  #side-testimonial {
+    display: none;
+  }
+}
+
+body:not(.parent-pageid-674) {
+  aside {
+    .sidebar-img {
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+      }
+    }
+
+    .default-btn {
+      width: 100%;
+
+      .wp-block-button {
+        margin: 0;
+        width: 100%;
+
+        a {
+          max-width: unset;
+        }
+      }
+    }
+  }
+}

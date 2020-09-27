@@ -1,0 +1,432 @@
+/* stylelint-disable no-descending-specificity */
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+body.logged-in.admin-bar {
+  header.banner {
+    .container {
+      nav {
+        button.navbar-toggler {
+          @media screen and (max-width: 767px) {
+            top: 46px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+header.banner {
+  background-color: #fff;
+  position: relative;
+
+  #announcements {
+    background: map-get($theme-colors, primary);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      padding: 3.5em 0 2em 0;
+    }
+
+    .container {
+      height: unset !important;
+    }
+
+    a {
+      color: #002e6c;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1200px) {
+      max-width: unset;
+    }
+
+    .brand-container {
+      width: 100%;
+      z-index: 1;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20px;
+      }
+
+      .header-right {
+        font-size: 21px;
+        color: #fff;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+
+        #resizer {
+          color: map-get($theme-colors, primary);
+          display: flex;
+          height: 30px;
+          align-items: center;
+          justify-content: flex-end;
+
+          @media screen and (max-width: 767px) {
+            height: 50px;
+          }
+
+          #resize-label {
+            position: relative;
+            color: #000;
+            margin-right: 5px;
+          }
+
+          #resize-container {
+            display: flex;
+          }
+
+          .clickToResize {
+            display: flex;
+            align-items: center;
+
+            .resizeHover {
+              transition: font-size 100ms ease-in-out;
+
+              &:hover {
+                font-size: 120% !important;
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          #resizerNormal {
+            font-size: 16px;
+            position: relative;
+            top: 2.5px;
+          }
+
+          #resizerLarge {
+            font-size: 20px;
+            position: relative;
+            top: 1.5px;
+          }
+
+          #resizerXLarge {
+            font-size: 24px;
+          }
+        }
+
+        .search-form {
+          input[type=search] {
+            width: 275px;
+            height: 30px;
+          }
+
+          input[type=submit] {
+            display: none;
+          }
+
+          label {
+            margin-bottom: 0;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          padding-right: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+          position: relative;
+          top: -20px;
+          align-items: center;
+        }
+
+        .header-contact {
+          color: #3a3a3a;
+        }
+      }
+
+      p {
+        @media screen and (min-width: 768px) {
+          margin-left: 20px;
+        }
+      }
+
+      .navbar-brand {
+        width: 320px;
+        height: 155px;
+        background: url("/wp-content/uploads/2020/05/CarolinaVeinSpecialistsLogo2016-Horiz.png") no-repeat center center/contain;
+        text-indent: -9999px;
+        margin-right: 0;
+
+        @media screen and(max-width: 767px) {
+          max-width: 80%;
+          margin-left: -45px;
+        }
+      }
+    }
+
+    &.main-nav-container {
+      max-width: unset;
+      padding: 0;
+    }
+
+    nav {
+      padding: 0;
+      align-items: flex-end;
+
+      button.navbar-toggler {
+        z-index: 3;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+
+        @media screen and (max-width: 767px) {
+          left: 0;
+          position: fixed;
+          top: 0;
+          background-color: map-get($theme-colors, deep-blue-opaque);
+          border-radius: 1px 0 3px 0;
+        }
+
+        &[aria-expanded="true"] {
+          .hamburger-wrapper {
+            .hamburger {
+              transform: rotate(135deg);
+
+              &::before,
+              &::after {
+                top: 0;
+                transform: rotate(90deg);
+              }
+            }
+          }
+        }
+
+        .hamburger-wrapper {
+          margin: auto;
+          height: 35px;
+          width: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .hamburger {
+            height: 2px;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            position: relative;
+            transition: all 0.4s ease;
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              background: inherit;
+              width: 100%;
+              height: 2px;
+              top: -10px;
+            }
+
+            &::after {
+              top: 10px;
+            }
+          }
+        }
+      }
+
+      #bs4navbar {
+        background-color: map-get($theme-colors, deep-blue);
+        transition: opacity 0.4s linear;
+
+        @media screen and (max-width: 767px) {
+          background-color: #01698f;
+        }
+
+        &.collapsing {
+          -webkit-transition: height 0.01s;
+          -moz-transition: height 0.01s;
+          -ms-transition: height 0.01s;
+          -o-transition: height 0.01s;
+          transition: height 0.01s;
+        }
+
+        @media screen and (max-width: 767px) {
+          &:not(.show) {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          &.show {
+            left: 0;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+            width: 100vw;
+            padding: 20px;
+            background-color: map-get($theme-colors, primary-opaque);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            visibility: visible;
+            opacity: 1;
+            overflow: auto;
+          }
+        }
+
+        #menu-primary-navigation {
+          width: 100%;
+          justify-content: space-evenly;
+          max-width: 1360px;
+          margin: auto;
+
+          @media screen and (max-width: 767px) {
+            width: unset;
+          }
+
+          @media screen and (min-width: 768px) {
+            #menu-item-1031,
+            #menu-item-1032,
+            #menu-item-1033,
+            #menu-item-1057 {
+              display: none;
+            }
+          }
+
+          li {
+            z-index: 2;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 767px) {
+              max-width: 65vw;
+
+              > a {
+                padding-left: 10px;
+              }
+            }
+
+            .dropdown-toggle:focus {
+              background-color: map-get($theme-colors, light-blue);
+            }
+
+            .dropdown-menu {
+              background: map-get($theme-colors, dark-primary-opaque);
+              margin: 0;
+              border-radius: 0;
+
+              @media screen and (min-width: 768px) {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+
+                &.show {
+                  background: map-get($theme-colors, dark-primary-opaque);
+                  visibility: visible;
+                  opacity: 1;
+                }
+              }
+
+              .dropdown-item {
+                padding: 0.25rem 0.75rem;
+
+                @media screen and (max-width: 767px) {
+                  white-space: normal;
+                }
+
+                &.active {
+                  background-color: map-get($theme-colors, deep-blue);
+                  color: #fff;
+                }
+
+                &:first-child {
+                  padding-top: 0;
+                }
+
+                &:last-child {
+                  padding-bottom: 0;
+                  border: none;
+                }
+              }
+
+              .dropdown-item:hover {
+                background-color: map-get($theme-colors, deep-blue);
+                color: #fff;
+              }
+            }
+
+            @media screen and (max-width: 1200px) and (min-width: 768px) {
+              > a {
+                padding: 8px 0.4vw;
+              }
+            }
+
+            a {
+              color: #fff;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              white-space: nowrap;
+
+              @include raleway;
+            }
+          }
+        }
+      }
+
+      &.upper-nav {
+        #bs4navbar-upper {
+          ul#menu-upper-navigation {
+            li {
+              margin-bottom: 0;
+
+              a {
+                color: #3a3a3a;
+                font-size: 16px;
+                font-family: raleway, sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: underline;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+
+              &:last-child {
+                a {
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

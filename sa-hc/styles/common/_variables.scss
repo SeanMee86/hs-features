@@ -1,0 +1,130 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  main-blue: #0399d0,
+  dark-blue: #0c2f68,
+  main-orange: #f2733d,
+  main-yellow: #ffde05,
+  white: #fff
+);
+
+/** Fonts */
+
+@mixin arboriaBookItalic() {
+  font-family: arboria, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin arboriaBook() {
+  font-family: arboria, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin arboriaBold() {
+  font-family: arboria, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin arboriaBookBoldItalic() {
+  font-family: arboria, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin arboriaMedium() {
+  font-family: arboria, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin arboriaBlack() {
+  font-family: arboria, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*** Section Mixins ***/
+
+@mixin sectionStyling() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 50px 0;
+}
+
+@mixin sectionInnerStyling($maxWidth: 900px) {
+  > .wp-block-group__inner-container {
+    width: 100%;
+    max-width: $maxWidth;
+    padding: 0 20px;
+  }
+}
+
+@mixin sectionHeader($textColor) {
+  h2 {
+    font-size: 64px;
+    color: $textColor;
+    line-height: 1;
+
+    @include arboriaBold();
+
+    @media screen and (max-width: 767px) {
+      font-size: 50px;
+    }
+  }
+}
+
+@mixin pageHeaderH1 {
+  h1 {
+    color: #fff;
+    font-size: 80px;
+    text-shadow: 2px 2px 8px black;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@mixin btnOverride() {
+  .wp-block-buttons {
+    .wp-block-button {
+      &:hover {
+        cursor: pointer;
+      }
+
+      a {
+        background: transparent;
+        font-weight: 500;
+        padding: 2px 10px;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin iosAnchorFix($top) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    top: $top;
+  }
+}
+
+@mixin iosAnchorFixFromOtherPage {
+  @supports (-webkit-overflow-scrolling: touch) {
+    top: -70px;
+  }
+}

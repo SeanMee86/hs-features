@@ -1,0 +1,204 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #43368a,
+  primary-opaque: rgba(67, 54, 138, 0.85),
+  dark-primary: #463b56,
+  dark-primary-opaque: rgba(70, 59, 86, 0.85),
+  deep-blue: #7a9bae,
+  deep-blue-opaque: rgba(122, 155, 174, 0.85),
+  orange: #f3713c,
+  blue: #0299cf
+);
+
+/****** Homepage styling Mixins *******/
+
+/**
+Styling for the plain text sections on the home page.
+ */
+@mixin textSection {
+  color: #3b3b3b;
+  max-width: 685px;
+  padding: 7rem 3rem;
+
+  @media screen and (max-width: 850px) {
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    color: #222;
+  }
+
+  p {
+    @include adelle;
+
+    &.section-headline {
+      color: map-get($theme-colors, dark-primary);
+
+      @include raleway;
+    }
+  }
+
+  .default-btn {
+    width: 350px;
+
+    @media screen and (max-width: 550px) {
+      width: unset;
+    }
+  }
+}
+
+/**
+Styling for the testimonial call outs on the homepage, takes in the background color as an argument
+ */
+@mixin testimonial($backgroundColor) {
+  .testimonial {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $backgroundColor;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 900px;
+    z-index: 2;
+
+    @media screen and(max-width: 850px) {
+      position: static;
+      transform: unset;
+      max-width: unset;
+      border-radius: 0;
+    }
+
+    .block-quote {
+      color: #fff;
+
+      .wp-block-group__inner-container {
+        display: flex;
+      }
+
+      .the-quote {
+        border-left: 1px solid #fff;
+        padding-left: 10px;
+        margin-left: 75px;
+        margin-bottom: 0;
+        color: #fff;
+
+        @include adelle-italic;
+
+        @media screen and (max-width: 850px) {
+          margin-left: 50px;
+        }
+      }
+
+      .double-quote {
+        font-size: 125px;
+        position: absolute;
+        top: -20px;
+        color: #fff;
+
+        @media screen and (max-width: 850px) {
+          top: unset;
+          left: 0;
+        }
+      }
+    }
+
+    .patient-name {
+      display: flex;
+      justify-content: flex-end;
+      color: #fff;
+      margin-bottom: 0;
+
+      @include raleway;
+    }
+  }
+}
+
+@mixin innerPageTestimonial() {
+  .inner-page-testimonial {
+    padding: 20px;
+    background: map-get($theme-colors, dark-primary-opaque);
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    p {
+      color: #fff;
+    }
+
+    &:nth-child(even) {
+      background: map-get($theme-colors, deep-blue-opaque);
+    }
+  }
+}
+
+/** Font Mixins */
+
+@font-face {
+  font-family: "raleway";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "adelle";
+  font-display: swap;
+}
+
+@mixin raleway() {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin raleway-italic() {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin raleway-bold() {
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin raleway-semi-bold() {
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin raleway-bold-italic() {
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin adelle() {
+  font-family: adelle, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin adelle-italic() {
+  font-family: adelle, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin adelle-bold() {
+  font-family: adelle, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin adelle-bold-italic() {
+  font-family: adelle, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

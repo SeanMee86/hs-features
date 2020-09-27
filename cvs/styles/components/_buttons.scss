@@ -1,0 +1,35 @@
+/* stylelint-disable no-descending-specificity */
+.default-btn {
+  a {
+    background: map-get($theme-colors, primary);
+    border: 2px solid map-get($theme-colors, primary);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 360px;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    width: 100%;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: #fff;
+      color: map-get($theme-colors, primary) !important;
+      text-decoration: none;
+    }
+  }
+}
+
+.header-btn {
+  width: 275px;
+  background-color: map-get($theme-colors, primary);
+  margin-bottom: 15px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+}

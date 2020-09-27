@@ -1,0 +1,70 @@
+@import "../common/_variables.scss";
+
+header {
+  background-color: map_get($theme-colors, main-blue);
+
+  .container {
+    nav {
+      .custom-toggler.navbar-toggler {
+        border-color: #fff;
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+      }
+
+      #navbarText {
+        justify-content: space-evenly;
+      }
+
+      .nav-item {
+        margin-right: 15px;
+
+        .nav-link {
+          color: #fff;
+          font-size: 18px;
+
+          @include arboriaMedium();
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+          }
+
+          &.dropdown-toggle::after {
+            display: none;
+          }
+        }
+
+        .dropdown-menu {
+          background: map-get($theme-colors, dark-blue);
+          border-radius: 0;
+          padding: 0;
+          top: 55px;
+
+          .dropdown-item {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+
+            @include arboriaMedium();
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            &:hover {
+              color: map-get($theme-colors, dark-blue);
+              background-color: #fff;
+            }
+          }
+        }
+
+        &.active {
+          .nav-link {
+            border-bottom: 2px solid map-get($theme-colors, main-yellow);
+            padding-bottom: 3px;
+          }
+        }
+      }
+    }
+  }
+}

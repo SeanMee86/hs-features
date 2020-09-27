@@ -1,0 +1,861 @@
+/* stylelint-disable no-descending-specificity */
+body.page-template-default,
+body.post-template-default {
+  .wrap.container {
+    margin: auto;
+    max-width: 1140px;
+
+    .content {
+      display: flex;
+
+      @media screen and (max-width: 550px) {
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+      }
+
+      .main {
+        -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%;
+        padding: 2em 1em;
+        width: 100%;
+
+        .wp-block-eedee-block-gutenslider.arrow-style-1 .slick-next::before,
+        .wp-block-eedee-block-gutenslider.arrow-style-1 .slick-prev::before {
+          color: map-get($theme-colors, primary);
+        }
+
+        .slick-dots li button::before {
+          color: map-get($theme-colors, primary) !important;
+        }
+
+        .wp-block-image {
+          figcaption {
+            text-align: center;
+          }
+        }
+
+        p,
+        li {
+          @include adelle;
+        }
+
+        iframe {
+          max-width: 100%;
+        }
+
+        @include innerPageTestimonial;
+
+        .wp-block-gallery {
+          justify-content: space-around;
+        }
+
+        @media screen and (max-width: 1200px) {
+          padding: 2em 1em;
+        }
+
+        @media screen and (max-width: 767px) {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding: 2em 1em 0 1em;
+        }
+      }
+
+      .sidebar {
+        -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+        padding: 2em 0;
+
+        @media screen and (max-width: 1200px) {
+          padding: 2em 1em;
+        }
+
+        @media screen and (max-width: 767px) {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding: 2em 1em 0 1em;
+        }
+      }
+    }
+  }
+}
+
+body.blog {
+  .wrap.container {
+    .content {
+      .main {
+        padding: 2rem 0;
+
+        p {
+          @include adelle;
+        }
+
+        nav {
+          ul {
+            li {
+              &.page-item {
+                border: 1px solid map-get($theme-colors, primary);
+                min-width: 30px;
+                text-align: center;
+
+                a {
+                  text-decoration: none;
+                  width: 100%;
+                  height: 100%;
+                  padding: 5px;
+                  display: block;
+                  box-sizing: border-box;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+
+                &.active {
+                  background-color: map-get($theme-colors, primary-opaque);
+                  padding: 5px;
+
+                  span {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.page-id-674 {
+  .wrap.container {
+    .content {
+      .main {
+        .team-page-bio {
+          > .wp-block-group__inner-container {
+            display: flex;
+            flex-flow: row-reverse;
+
+            @media screen and (max-width: 550px) {
+              flex-flow: column;
+              align-items: center;
+            }
+
+            figure {
+              img {
+                max-width: 180px;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.contact-us {
+  &.template-custom {
+    .wrap.container {
+      .content {
+        .main {
+          padding: 2em 1em;
+
+          iframe {
+            width: 100%;
+          }
+
+          p {
+            @include adelle;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.varicose-veins {
+  > .wrap.container {
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+
+    .content {
+      .main {
+        iframe {
+          max-width: 100%;
+        }
+
+        p {
+          @include adelle;
+        }
+
+        #varicose-veins-testimonial {
+          @include testimonial(map-get($theme-colors, deep-blue-opaque));
+
+          position: relative;
+
+          figure {
+            max-height: 60vh;
+            overflow: hidden;
+            margin-bottom: 0;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          @media screen and (max-width: 850px) {
+            .testimonial .block-quote .double-quote {
+              margin-top: -35px;
+            }
+          }
+        }
+
+        .varicose-bottom {
+          padding: 2rem 15px;
+
+          .wp-block-columns ~ p {
+            width: 66.667%;
+
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+          }
+
+          .before-after-box {
+            border-radius: 5px;
+            background-color: #6e6a82;
+
+            @media screen and (max-width: 787px) {
+              margin: 10px;
+            }
+
+            @media screen and (max-width: 599px) {
+              max-width: 350px;
+              margin: 10px auto;
+            }
+
+            .before-after-img-container {
+              position: relative;
+
+              figcaption {
+                color: #fff;
+                position: absolute;
+                top: 0;
+                right: 20px;
+                font-size: 20px;
+                white-space: nowrap;
+              }
+
+              .ba-img-top {
+                figcaption {
+                  left: 20px;
+                  top: -3px;
+                }
+              }
+
+              i {
+                box-sizing: border-box;
+                color: #fff;
+                z-index: 5;
+                border: 3px solid #fff;
+                position: absolute;
+                padding: 7px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%) rotate(90deg);
+                bottom: 50%;
+                left: calc(50% + 2px);
+                font-size: 20px;
+
+                &:hover {
+                  cursor: ew-resize;
+                }
+              }
+
+              .ba-img-top,
+              .ba-img-bottom {
+                width: 100%;
+
+                img {
+                  width: 100%;
+                  border-radius: 5px 5px 0 0;
+                }
+              }
+
+              .ba-img-bottom {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                border-left: 3px solid #fff;
+
+                img {
+                  max-width: unset;
+                  height: 100%;
+                  width: unset;
+                  position: absolute;
+                  right: 0;
+                }
+              }
+            }
+
+            .ba-text {
+              padding: 10px;
+
+              h3 {
+                font-size: 1.6rem;
+                color: #fff;
+              }
+
+              p {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.vein-problems,
+body.varicose-veins {
+  .wrap.container {
+    .content {
+      .main {
+        p {
+          @include adelle;
+        }
+
+        .vein-problems-top,
+        .vein-problems-bottom {
+          > .wp-block-group__inner-container {
+            display: flex;
+
+            @media screen and (max-width: 767px) {
+              flex-flow: column;
+            }
+
+            > .wp-block-group {
+              padding: 2rem 0;
+
+              &.vp-top-left,
+              &.vp-bottom-left {
+                width: 66.667%;
+                padding-right: 2rem;
+
+                @media screen and (max-width: 767px) {
+                  width: 100%;
+                  padding-right: 0;
+                }
+              }
+
+              &.vp-top-right {
+                width: 33.333%;
+
+                @media screen and (max-width: 767px) {
+                  width: 100%;
+                }
+
+                > .wp-block-group__inner-container {
+                  display: flex;
+                  flex-flow: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  .wp-block-buttons {
+                    width: 100%;
+
+                    .wp-block-button {
+                      width: 100%;
+                      margin-right: 0;
+                      margin-bottom: 0;
+
+                      a {
+                        max-width: unset;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .uagb-post-grid {
+          .uagb-post__inner-wrap {
+            border-radius: 5px;
+            background-color: #6e6a82;
+            position: relative;
+
+            .uagb-post__text {
+              color: #fff;
+
+              h3 a {
+                color: #fff;
+                pointer-events: none;
+              }
+
+              .uagb-post__excerpt {
+                margin-bottom: 35px;
+
+                @include adelle;
+              }
+
+              .uagb-post__cta {
+                background-color: transparent;
+                display: block;
+                text-align: right;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+              }
+            }
+
+            .uagb-post__image {
+              pointer-events: none;
+
+              a {
+                img {
+                  height: auto;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.home {
+  .wrap.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: unset;
+    background-color: #fff;
+
+    /****** Homepage styling *******/
+    #hero-section {
+      .wp-block-group__inner-container {
+        .wp-block-cover {
+          background-size: contain;
+          background-position: right;
+          background-repeat: no-repeat;
+          position: relative;
+
+          @media screen and (max-width: 910px) {
+            background-size: cover;
+          }
+
+          @media screen and (max-width: 767px) {
+            background-position: 75%;
+          }
+
+          &::after {
+            content: "";
+            background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 75%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 75%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#00000000", GradientType=1); /* IE6-9 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            @media screen and(min-width: 1560px) {
+              background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(0, 0, 0, 0) 80%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(0, 0, 0, 0) 80%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(0, 0, 0, 0) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+
+            @media screen and(max-width: 1200px) {
+              background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(0, 0, 0, 0) 75%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(0, 0, 0, 0) 75%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(0, 0, 0, 0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+
+            @media screen and(max-width: 767px) {
+              background: rgba(255, 255, 255, 0.6);
+            }
+          }
+
+          #hero-text {
+            padding: 35px 0 25px 0;
+            max-width: 1200px;
+            margin: 50px auto;
+
+            h1 {
+              color: #222;
+              max-width: 750px;
+              font-size: 48px;
+
+              @media screen and (max-width: 576px) {
+                font-size: 36px;
+              }
+            }
+
+            h2 {
+              @include raleway-italic;
+
+              color: map-get($theme-colors, dark-primary);
+            }
+
+            p {
+              @include adelle;
+
+              color: #3b3b3b;
+              max-width: 500px;
+
+              @media screen and (max-width: 576px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #section-1 {
+      background: #fff;
+      position: relative;
+
+      .wp-block-group__inner-container {
+        .wp-block-columns {
+          margin-bottom: 0;
+
+          @media screen and (max-width: 850px) {
+            flex-flow: column-reverse;
+            height: unset;
+            margin: 0;
+          }
+
+          .wp-block-column {
+            &:last-child {
+              @include textSection;
+
+              .wp-block-group {
+                @media screen and (min-width: 851px) {
+                  position: relative;
+                  top: -70px;
+                  left: -60px;
+                }
+              }
+            }
+
+            .wp-block-cover {
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: bottom right;
+
+              @media screen and (max-width: 850px) {
+                min-height: 320px;
+                background-position: bottom left;
+              }
+            }
+          }
+        }
+      }
+
+      @include testimonial(map-get($theme-colors, deep-blue-opaque));
+    }
+
+    #section-2 {
+      margin: auto;
+      max-width: 1200px;
+
+      .wp-block-group__inner-container {
+        .wp-block-columns {
+          @media screen and (max-width: 850px) {
+            flex-flow: column;
+          }
+
+          .wp-block-column {
+            @include textSection;
+
+            @media screen and (max-width: 850px) {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+
+    #section-3 {
+      @include testimonial(map-get($theme-colors, dark-primary-opaque));
+
+      position: relative;
+
+      figure {
+        max-height: 60vh;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        .testimonial .block-quote .double-quote {
+          margin-top: -35px;
+        }
+      }
+    }
+
+    #section-4 {
+      margin: auto;
+      max-width: 1200px;
+
+      .wp-block-group__inner-container {
+        .wp-block-columns {
+          @media screen and (max-width: 850px) {
+            flex-flow: column;
+          }
+
+          .wp-block-column {
+            @include textSection;
+
+            @media screen and (max-width: 850px) {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+
+    #section-5 {
+      @include testimonial(map-get($theme-colors, deep-blue-opaque));
+
+      .testimonial {
+        top: unset;
+        bottom: 0;
+      }
+
+      position: relative;
+
+      figure {
+        max-height: 80vh;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        .testimonial .block-quote .double-quote {
+          margin-top: -35px;
+        }
+      }
+    }
+
+    #section-6 {
+      margin: auto;
+      max-width: 1200px;
+
+      .wp-block-group__inner-container {
+        .wp-block-columns {
+          @media screen and (max-width: 850px) {
+            flex-flow: column;
+          }
+
+          .wp-block-column {
+            @include textSection;
+
+            @media screen and (max-width: 850px) {
+              margin: auto;
+            }
+
+            figure {
+              iframe {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #section-7 {
+      margin: auto;
+      max-width: 1400px;
+      padding-bottom: 5rem;
+
+      @media screen and (max-width: 850px) {
+        padding-bottom: 0;
+      }
+
+      .wp-block-group__inner-container {
+        .wp-block-columns {
+          @media screen and (max-width: 950px) {
+            flex-flow: column;
+          }
+
+          .wp-block-column {
+            @include textSection;
+
+            padding: 0 15px;
+
+            .default-btn {
+              max-width: 270px;
+            }
+
+            figure {
+              iframe {
+                width: 100%;
+              }
+            }
+
+            @media screen and (max-width: 950px) {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+
+    #section-8 {
+      @include testimonial(map-get($theme-colors, dark-primary-opaque));
+
+      position: relative;
+
+      figure {
+        max-height: 70vh;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        .testimonial .block-quote .double-quote {
+          margin-top: -35px;
+        }
+      }
+    }
+  }
+
+  #covid-stats {
+    padding: 35px;
+
+    @media screen and (max-width: 768px) {
+      padding: 35px 0;
+    }
+
+    /* Generic Styling, for Desktops/Laptops */
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    /* Zebra striping */
+    tr:nth-of-type(odd) {
+      background: #eee;
+    }
+
+    th {
+      background: #333;
+      color: white;
+      font-weight: bold;
+    }
+
+    td,
+    th {
+      padding: 6px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    /* Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically. */
+
+    @media screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+      /* Force table to not be like tables anymore */
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        border: 1px solid #ccc;
+      }
+
+      td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        /* Now like a table header */
+        position: absolute;
+
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+
+      /* Label the data */
+      td:nth-of-type(1)::before {
+        content: "Operational Beds";
+      }
+
+      td:nth-of-type(2)::before {
+        content: "Tests Pending";
+      }
+
+      td:nth-of-type(3)::before {
+        content: "Tests Negative";
+      }
+
+      td:nth-of-type(4)::before {
+        content: "Active Positives";
+      }
+
+      td:nth-of-type(5)::before {
+        content: "Recovered";
+      }
+    }
+  }
+
+  @media (max-width: 781px) and (min-width: 600px) {
+    .wp-block-column:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
+}

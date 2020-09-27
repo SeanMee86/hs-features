@@ -1,0 +1,44 @@
+.btn {
+  @include arboriaBold();
+
+  font-size: 18px;
+}
+
+.btn-outline-white {
+  border-radius: 25px;
+  padding: 8px 15px;
+  border-width: 2px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: map-get($theme-colors, dark-blue);
+    border-color: map-get($theme-colors, dark-blue);
+    color: #fff;
+  }
+}
+
+.btn-main-blue {
+  border-radius: 25px;
+  padding: 5px 20px;
+  border-width: 2px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+
+  a {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: map-get($theme-colors, dark-blue);
+    border-color: map-get($theme-colors, dark-blue);
+    color: #fff;
+  }
+}
+
+body.page-id-198 .wrap .content .main #section-2 .wp-block-buttons .wp-block-button a {
+  padding: 2px 0;
+}

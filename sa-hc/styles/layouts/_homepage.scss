@@ -1,0 +1,463 @@
+/* stylelint-disable no-descending-specificity */
+@import "../common/variables";
+
+// Homepage Styling
+.wrap {
+  padding: 0;
+
+  .content {
+    .main {
+      p {
+        color: #636363;
+      }
+
+      #section-2 {
+        min-height: 50vh;
+        position: relative;
+
+        #section-2-anchor {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFix(-330px);
+        }
+
+        #section-2-anchor-ios {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFixFromOtherPage;
+        }
+
+        @include sectionHeader(map-get($theme-colors, dark-blue));
+
+        .section-2-uc {
+          text-transform: uppercase;
+          color: map-get($theme-colors, main-blue);
+          max-width: 56ch;
+          margin: 30px auto;
+
+          @include arboriaBold();
+        }
+
+        p:not(.section-2-uc) {
+          max-width: 72ch;
+          margin: 30px auto;
+
+          @include arboriaBook();
+        }
+
+        @include btnOverride();
+        @include sectionStyling();
+        @include sectionInnerStyling();
+
+        @media screen and (max-width: 767px) {
+          padding: 65px 0;
+        }
+      }
+
+      #section-3 {
+        min-height: 50vh;
+        background-color: map-get($theme-colors, main-orange);
+        position: relative;
+
+        #section-3-anchor {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFix(-400px);
+        }
+
+        #section-3-anchor-ios {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFixFromOtherPage;
+        }
+
+        @include sectionHeader(#fff);
+
+        .row {
+          p {
+            margin: 5px auto 25px;
+          }
+
+          .col-6 {
+            p {
+              letter-spacing: 2px;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        p {
+          color: #fff;
+          margin: 30px auto;
+
+          @include arboriaBook();
+        }
+
+        img {
+          width: 50px;
+          height: auto;
+        }
+
+        @include btnOverride();
+        @include sectionStyling();
+        @include sectionInnerStyling();
+      }
+
+      #testimonials-container {
+        position: relative;
+
+        @media screen and (max-width: 496px) {
+          min-height: 603px;
+        }
+
+        #testimonials-anchor {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFix(-400px);
+        }
+
+        #testimonials-anchor-ios {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFixFromOtherPage;
+        }
+
+        #testimonials {
+          #rev_slider_1_1_wrapper .ares .tp-bullet:hover,
+          #rev_slider_1_1_wrapper .ares .tp-bullet.selected {
+            background: #ffde05;
+          }
+
+          #slider-1-slide-2-layer-6,
+          #slider-1-slide-2-layer-7,
+          #slider-1-slide-2-layer-11,
+          #slider-1-slide-1-layer-5,
+          #slider-1-slide-1-layer-8,
+          #slider-1-slide-1-layer-9,
+          #slider-1-slide-1-layer-24,
+          #slider-1-slide-3-layer-5,
+          #slider-1-slide-3-layer-25,
+          #slider-1-slide-3-layer-8,
+          #slider-1-slide-3-layer-9,
+          #slider-1-slide-4-layer-27,
+          #slider-1-slide-4-layer-5,
+          #slider-1-slide-4-layer-8,
+          #slider-1-slide-4-layer-9,
+          #slider-1-slide-5-layer-24,
+          #slider-1-slide-5-layer-5,
+          #slider-1-slide-5-layer-8,
+          #slider-1-slide-5-layer-9 {
+            font-family: arboria, sans-serif !important;
+          }
+
+          #slider-1-slide-2-layer-11 {
+            text-align: center !important;
+          }
+
+          #slider-1-slide-1-layer-5,
+          #slider-1-slide-3-layer-5,
+          #slider-1-slide-4-layer-5,
+          #slider-1-slide-5-layer-5 {
+            letter-spacing: 0 !important;
+            line-height: 1.2 !important;
+          }
+
+          #slider-1-slide-1-layer-9 {
+            font-weight: 700 !important;
+            font-size: 16px !important;
+            padding: 11px 49px !important;
+            line-height: 1.2 !important;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
+
+            &:hover {
+              background: map-get($theme-colors, dark-blue) !important;
+            }
+          }
+        }
+      }
+
+      #section-5 {
+        min-height: 40vh;
+        background-color: map-get($theme-colors, dark-blue);
+        position: relative;
+        overflow: hidden;
+
+        #section-5-anchor {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFix(-400px);
+        }
+
+        #section-5-anchor-ios {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFixFromOtherPage;
+        }
+
+        figure {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 800px;
+          width: 800px;
+
+          img {
+            position: absolute;
+            top: -33%;
+            left: -37%;
+            z-index: 0;
+
+            @media screen and (max-width: 550px) {
+              top: -20%;
+              left: -20%;
+            }
+          }
+        }
+
+        @include sectionHeader(#fff);
+
+        p {
+          color: #fff;
+          position: relative;
+          max-width: 65ch;
+          margin: 30px auto;
+
+          @include arboriaBook();
+        }
+
+        h2,
+        .wp-block-buttons {
+          position: relative;
+        }
+
+        .btn-main-blue {
+          &:hover {
+            background-color: map-get($theme-colors, main-yellow);
+            border-color: map-get($theme-colors, main-yellow);
+          }
+        }
+
+        @include btnOverride();
+        @include sectionStyling();
+        @include sectionInnerStyling();
+      }
+
+      #section-6 {
+        .uagb-post-grid {
+          .uagb-post__items {
+            margin: 0;
+
+            article {
+              padding: 0;
+              margin: 0;
+
+              .uagb-post__inner-wrap {
+                background: #0399cf;
+                display: flex;
+                align-items: flex-end;
+                overflow: hidden;
+                position: relative;
+
+                &:hover {
+                  .uagb-post__image {
+                    top: 0;
+                  }
+                }
+
+                .uagb-post__image {
+                  position: absolute;
+                  top: -100%;
+                  height: 100%;
+                  overflow: hidden;
+                  width: 100%;
+                  //transition: top 0.4s ease-in-out;
+
+                  img {
+                    width: auto;
+                    height: 100%;
+                  }
+                }
+
+                .uagb-post__text {
+                  margin: auto;
+
+                  .uagb-post-grid-byline {
+                    display: none;
+                  }
+
+                  .uagb-post__title {
+                    margin-bottom: 0;
+                    text-align: center;
+
+                    a {
+                      color: #fff;
+                      font-size: 20px;
+                      cursor: default;
+                      text-align: center;
+
+                      @include arboriaBold();
+                    }
+                  }
+
+                  .uagb-post__excerpt {
+                    color: #fff;
+                    font-size: 20px;
+
+                    @include arboriaBook();
+                  }
+                }
+              }
+
+              @media screen and (min-width: 768px) {
+                &:nth-child(even) {
+                  .uagb-post__inner-wrap {
+                    background: #15a8dd;
+                  }
+                }
+              }
+
+              @media screen and (max-width: 767px) {
+                &:nth-child(1),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(8),
+                &:nth-child(9),
+                &:nth-child(12),
+                &:nth-child(13) {
+                  .uagb-post__inner-wrap {
+                    background: #15a8dd;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #section-7 {
+        min-height: 30vh;
+        background-color: map-get($theme-colors, main-orange);
+        position: relative;
+        overflow: hidden;
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          position: relative;
+
+          .social-icon {
+            padding: 10px;
+            border: 2px solid #fff;
+            margin: 10px;
+            border-radius: 50%;
+            width: 58px;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+
+            &:hover {
+              border-color: map-get($theme-colors, dark-blue);
+
+              a {
+                color: map-get($theme-colors, dark-blue);
+              }
+            }
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+
+        figure {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          height: 700px;
+          width: 700px;
+
+          img {
+            position: absolute;
+            bottom: -74%;
+            right: -43%;
+            z-index: 0;
+
+            @media screen and (max-width: 550px) {
+              bottom: -20%;
+              right: -20%;
+            }
+          }
+        }
+
+        @include sectionHeader(#fff);
+
+        p {
+          color: #fff;
+          position: relative;
+          max-width: 65ch;
+          margin: 30px auto;
+
+          @include arboriaBook();
+        }
+
+        h2,
+        .wp-block-buttons {
+          position: relative;
+        }
+
+        @include btnOverride();
+        @include sectionStyling();
+        @include sectionInnerStyling();
+      }
+
+      #section-7-1 {
+        max-width: 1000px;
+        padding-top: 2em;
+
+        @media screen and (max-width: 480px) {
+          min-height: 1500px;
+        }
+      }
+
+      #section-8 {
+        min-height: 30vh;
+        padding-top: 0 !important;
+        position: relative;
+
+        #section-8-anchor {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFix(-330px);
+        }
+
+        #section-8-anchor-ios {
+          position: absolute;
+          top: -70px;
+
+          @include iosAnchorFixFromOtherPage;
+        }
+
+        p {
+          margin: 30px 0;
+          max-width: 36ch;
+
+          @include arboriaBook();
+        }
+
+        @include sectionHeader(map-get($theme-colors, dark-blue));
+        @include sectionStyling();
+        @include sectionInnerStyling();
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+/* stylelint-disable no-descending-specificity */
+
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+/** Gravity Forms */
+.gform_wrapper form {
+  margin-bottom: 0;
+
+  .gform_body ul li:not(#field_2_5):not(#field_2_6) label {
+    display: none;
+  }
+}
+
+.gform_wrapper ul {
+  @extend .list-unstyled;
+}
+
+.gform_wrapper li {
+  @extend .form-group;
+}
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: $danger;
+}
+
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="date"],
+.gform_wrapper input[type="datetime"],
+.gform_wrapper input[type="datetime-local"],
+.gform_wrapper input[type="month"],
+.gform_wrapper input[type="number"],
+.gform_wrapper input[type="password"],
+.gform_wrapper input[type="search"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="time"],
+.gform_wrapper input[type="week"],
+.gform_wrapper input[type="url"],
+.gform_wrapper select,
+.gform_wrapper textarea {
+  padding-left: 5px;
+  border-radius: 0;
+  border-width: 2px;
+
+  @extend .form-control;
+
+  &::placeholder {
+    @include arboriaBook();
+  }
+}
+
+.gform_wrapper textarea {
+  height: 128px !important;
+}
+
+.gform_wrapper .button {
+  border-radius: 20px;
+  min-width: 150px;
+  background-color: map-get($theme-colors, main-blue);
+
+  @extend .btn;
+  @extend .btn-primary;
+
+  &:hover {
+    background: map-get($theme-colors, dark-blue);
+  }
+}
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    @extend .alert-danger;
+  }
+
+  input,
+  select,
+  textarea {
+    @extend .alert-danger;
+  }
+}
+
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+}
+
+.validation_message {
+  display: none;
+}
+
+#gform_wrapper_2 {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+
+  input[type="submit"] {
+    margin: auto;
+    display: block;
+  }
+}

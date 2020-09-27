@@ -1,0 +1,166 @@
+/* stylelint-disable no-descending-specificity */
+
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+#gform_wrapper_1 {
+  margin: auto;
+  max-width: 360px;
+  width: 100%;
+  z-index: 1;
+
+  #gform_1 {
+    .gform_body {
+      h2,
+      h3 {
+        color: #3a3a3a;
+        text-align: center;
+
+        a {
+          color: #3a3a3a;
+        }
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      li {
+        label {
+          display: none;
+        }
+
+        input {
+          background: #fff;
+          border: 2px solid #222;
+          color: #3a3a3a;
+
+          &::placeholder {
+            color: map-get($theme-colors, primary);
+          }
+
+          &::-webkit-input-placeholder,
+          &::-moz-placeholder,
+          &:-ms-input-placeholder,
+          &:-moz-placeholder { /* Chrome/Opera/Safari */
+            color: map-get($theme-colors, primary);
+          }
+        }
+      }
+    }
+
+    .gform_footer {
+      padding-right: 16px;
+      text-align: center;
+
+      @media screen and (max-width: 767px) {
+        padding-right: 0;
+      }
+
+      #gform_submit_button_1 {
+        background: map-get($theme-colors, primary);
+        border: 2px solid map-get($theme-colors, primary);
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        max-width: 360px;
+        padding: 10px 35px;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+        width: 100%;
+
+        &:hover {
+          background: #fff;
+          color: map-get($theme-colors, primary) !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+body.bill-pay,
+body.employment-opportunities {
+  .gform_wrapper form {
+    margin-bottom: 0;
+  }
+
+  .gform_wrapper ul {
+    @extend .list-unstyled;
+  }
+
+  .gform_wrapper li {
+    @extend .form-group;
+  }
+
+  .gform_wrapper .gfield_required {
+    padding-left: 1px;
+    color: $danger;
+  }
+
+  .gform_wrapper input[type="email"],
+  .gform_wrapper input[type="date"],
+  .gform_wrapper input[type="datetime"],
+  .gform_wrapper input[type="datetime-local"],
+  .gform_wrapper input[type="month"],
+  .gform_wrapper input[type="number"],
+  .gform_wrapper input[type="password"],
+  .gform_wrapper input[type="search"],
+  .gform_wrapper input[type="tel"],
+  .gform_wrapper input[type="text"],
+  .gform_wrapper input[type="time"],
+  .gform_wrapper input[type="week"],
+  .gform_wrapper input[type="url"],
+  .gform_wrapper select,
+  .gform_wrapper textarea {
+    @extend .form-control;
+  }
+
+  .gform_wrapper input#input_3_4_3 {
+    display: inline-block;
+  }
+
+  .gform_wrapper .button {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+
+  .gform_wrapper .gfield_error {
+    .gfield_label {
+      @extend .alert-danger;
+    }
+
+    input,
+    select,
+    textarea {
+      @extend .alert-danger;
+    }
+  }
+
+  .validation_error {
+    @extend .alert;
+    @extend .alert-danger;
+  }
+
+  .validation_message {
+    display: none;
+  }
+}
